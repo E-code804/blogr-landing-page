@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* CSS variables */
+:root {
+    --very-dark-blue: #1f3f5b;
+    --white: #ffffff;
+    --white-opac: #ffffff3a;
+    --grayish-blue: #c8c8cb;
+    --grayish-blue-opac: #c8c8cb3f;
+    --very-dark-grayish-blue: #4b5862;
+    --very-dark-black-blue: #25252d;
+    --box-shadow: #25252d4a;
+    --light-red: #ff3d54;
+    --light-red-two: #ff525d;
+    --very-light-red: #ff8f70;
+    --very-light-red-two: #ff7a85;
+    --very-dark-gray-blue: #2c2d3f;
+    --very-dark-desaturated-blue: #3f4164;
+    --ubuntu: "Ubuntu", sans-serif;
+    --overpass: "Overpass", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--overpass);
+}
+
+
+/* Header Styles */
+.header {
+    background: url('./images/bg-pattern-intro-mobile.svg'), linear-gradient(90deg, var(--very-light-red), var(--light-red));
+    background-position: left 0vw top 0vh;
+    background-repeat: no-repeat;
+    padding: 3.5rem 8.5rem 9.95rem;
+    border-radius: 0 0 0 105px;
+    position: relative;
+}
+
+.nav-links {
+    color: var(--white);
+    position: relative;
+}
+
+.nav-links:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem 3.5rem 1rem 1.5rem;
+    margin-top: 1rem;
+    z-index: 10;
+    border-radius: 0.25rem;
+}
+
+.menu a {
+    display: block;
+    padding: 0.5rem 0;
+    color: black;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    font-weight: bold;
+}
+
+.icon-arrow {
+    transition: transform 0.2s ease-in-out;
+}
+.icon-arrow-rotate {
+    transform: rotate(180deg);
+}
+
+.btn-white {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    color: var(--light-red);
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+}
+
+.btn-white p {
+    margin-top: 3px;
+}
+
+.btn-norm {
+    border: 1px solid #fff;
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;
+    border-radius: 2rem;
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        padding: 3.5rem 2.5rem 9.95rem;
+    }
+}
