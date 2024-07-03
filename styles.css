@@ -45,6 +45,7 @@ body {
 .nav-links {
     color: var(--white);
     position: relative;
+    margin: 0;
 }
 
 .nav-links:hover {
@@ -80,7 +81,16 @@ body {
     transform: rotate(180deg);
 }
 
-.btn-white {
+.btn {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 2rem;
+    color: var(--light-red);
+    padding: 0.75rem 1.75rem;
+    font-weight: 600;   
+}
+
+.btn-signup {
     background: #fff;
     border: 1px solid #fff;
     border-radius: 2rem;
@@ -89,7 +99,7 @@ body {
     font-weight: 600;
 }
 
-.btn-white p {
+.btn-signup p {
     margin-top: 3px;
 }
 
@@ -101,12 +111,72 @@ body {
     color: #fff;
 }
 
-@media screen and (max-width: 1024px) {
-    .navbar {
-        display: none;
-    }
+.custom-hr {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin: 20px 0;
+    display: none;
+}
 
+/* flex w-full items-center justify-between */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
     .header {
         padding: 3.5rem 2.5rem 9.95rem;
+    }
+
+    .navbar {
+        display: none;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        top: 125px;
+        width: 87.5%;
+        background-color: white;
+        border-radius: 5px;
+        padding: 2rem 1.5rem;
+        flex-direction: column;
+        text-align: center;
+        gap: .75rem;
+        z-index: 1;
+        box-shadow: 4px 4px 25px var(--box-shadow);
+    }
+
+    .navbar.show {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu {
+        position: relative;
+        background-color: var(--grayish-blue-opac);
+        box-shadow: none;
+        padding: 1rem 2rem;
+        margin: 1rem 0;
+        border-radius: 0.25rem;
+        width: 100%;
+    }
+
+    .btn-signup {
+        background: linear-gradient(90deg, var(--very-light-red), var(--light-red));
+        color: white;
+    }
+
+    .custom-hr {
+        display: block;
     }
 }

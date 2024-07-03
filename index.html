@@ -16,12 +16,13 @@
     <div class="flex items-center justify-between">
       <img src="./images/logo.svg" alt="Blogr">
 
-      <nav class="navbar flex w-full items-center justify-between">
+      <nav class="navbar" id="navbar">
         <div class="flex items-center">
-          <ul class="flex ml-10 space-x-5">
+          <ul
+            class="flex flex-col space-x-0 space-y-5 ml-0 items-center lg:flex-row lg:ml-10 lg:space-x-5 lg:space-y-0">
             <li class="nav-links">
               <a href="#" class="flex font-bold items-center space-x-2">
-                <span>Product</span>
+                <span class="text-black lg:text-white">Product</span>
                 <img class="icon-arrow" src="./images/icon-arrow-light.svg" alt="icon arrow" />
               </a>
 
@@ -36,7 +37,7 @@
 
             <li class="nav-links">
               <a href="#" class="flex font-bold items-center space-x-2">
-                <span>Company</span>
+                <span class="text-black lg:text-white">Company</span>
                 <img class="icon-arrow" src="./images/icon-arrow-light.svg" alt="icon arrow" />
               </a>
 
@@ -50,7 +51,7 @@
 
             <li class="nav-links">
               <a href="#" class="flex font-bold items-center space-x-2">
-                <span>Contact</span>
+                <span class="text-black lg:text-white">Contact</span>
                 <img class="icon-arrow" src="./images/icon-arrow-light.svg" alt="icon arrow" />
               </a>
 
@@ -63,15 +64,17 @@
           </ul>
         </div>
 
-        <div class="space-x-8">
-          <button class="text-white font-bold">Login</button>
-          <button class="btn-white">
+        <div class="custom-hr"></div>
+
+        <div class="flex flex-col space-x-0 space-y-5 lg:flex-row lg:space-x-8 lg:space-y-0">
+          <button class="text-black lg:text-white font-bold">Login</button>
+          <button class="btn-signup">
             <p>Sign Up</p>
           </button>
         </div>
       </nav>
 
-      <img src="./images/icon-hamburger.svg" alt="hamburger menu" class="lg:hidden">
+      <img src="./images/icon-hamburger.svg" alt="hamburger menu" class="cursor-pointer lg:hidden" id="hamburger">
     </div>
 
     <section class="header-hero flex flex-col items-center text-center space-y-10">
@@ -79,8 +82,8 @@
 
       <p class="text-white">Grow your audience and build your online brand</p>
 
-      <div class="flex space-x-3">
-        <button class="btn-white">Start for Free</button>
+      <div class="flex space-x-0 lg:space-x-3">
+        <button class="btn">Start for Free</button>
         <button class="btn-norm">Learn More</button>
       </div>
     </section>

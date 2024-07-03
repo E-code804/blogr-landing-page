@@ -1,5 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-links a");
+  const hamburgerMenu = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+
+  // When clicking on the hamburger menu.
+  hamburgerMenu.addEventListener("click", () => {
+    if (hamburgerMenu.src.includes("icon-hamburger.svg")) {
+      hamburgerMenu.src = "./images/icon-close.svg";
+    } else {
+      hamburgerMenu.src = "./images/icon-hamburger.svg";
+    }
+    navbar.classList.toggle("show");
+  });
+
+  // Changing icon arrow for mobile
+  const updateIconSrc = () => {
+    const iconArrows = document.querySelectorAll(".icon-arrow");
+    iconArrows.forEach((icon) => {
+      if (window.innerWidth <= 1024) {
+        icon.src = "./images/icon-arrow-dark.svg";
+      } else {
+        icon.src = "./images/icon-arrow-light.svg";
+      }
+    });
+  };
 
   // Make sure all other arrows are down
   const downArrow = () => {
@@ -7,6 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
       icon.classList.remove("icon-arrow-rotate");
     });
   };
+
+  // Initial check
+  updateIconSrc();
 
   navLinks.forEach((link) => {
     link.addEventListener("click", function (event) {
@@ -27,10 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // Display the appropriate menu
       const menu = this.nextElementSibling;
       if (menu) {
-        menu.style.display =
-          menu.style.display === "none" || menu.style.display === ""
-            ? "block"
-            : "none";
+        if (menu.style.display === "none" || menu.style.display === "") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
       }
     });
   });
@@ -44,4 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
       downArrow();
     }
   });
+  window.addEventListener("resize", updateIconSrc);
 });
