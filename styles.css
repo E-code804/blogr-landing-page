@@ -3,6 +3,8 @@
 @import 'partials/header.css';
 @import 'partials/future.css';
 @import 'partials/state.css';
+@import 'partials/traits.css';
+@import 'partials/footer.css';
 
 /* CSS variables */
 :root {

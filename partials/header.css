@@ -53,19 +53,17 @@
     border-radius: 2rem;
     color: var(--light-red);
     padding: 0.75rem 1.75rem;
-    font-weight: 600;   
-}
-
-.btn-signup {
-    background: #fff;
-    border: 1px solid #fff;
-    border-radius: 2rem;
-    color: var(--light-red);
-    padding: 0.75rem 1.75rem;
     font-weight: 600;
+    transition: 0.2s;   
 }
 
-.btn-signup p {
+.btn:hover {
+    background: var(--very-light-red-two);
+    border: 1px solid var(--light-red);
+    color: white;
+}
+
+.btn p {
     margin-top: 3px;
 }
 
@@ -75,6 +73,12 @@
     font-weight: 600;
     border-radius: 2rem;
     color: #fff;
+    transition: 0.2s;
+}
+
+.btn-norm:hover {
+    background: #fff;
+    color: var(--light-red);
 }
 
 .custom-hr {

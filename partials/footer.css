@@ -1,0 +1,30 @@
+.footer {
+    background: var(--very-dark-desaturated-blue);
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+    border-radius: 0 105px 0 0;
+}
+
+
+.footer-link a {
+    color: var(--grayish-blue);
+}
+
+.head-footer-link {
+    margin-bottom: 1.5rem;
+}
+.head-footer-link a {
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        flex-direction: column;
+        padding: 5rem 0;
+        align-items: center;
+        text-align: center;
+    }
+}
